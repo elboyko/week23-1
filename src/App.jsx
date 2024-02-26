@@ -1,16 +1,14 @@
 import Rate from './Components/Rate/Rate'
 import './App.css'
 import "./Components/Rate/Rate.module.css"
+import rates from "./Components/Rate/rates.json"
 
 function App() {
   return (
     <>
       <div className="container">
         <div className="inner">
-          <Rate color="#00CED1" cost="300" speed="10" />
-          <Rate color="#3CB371" cost="450" speed="50" />
-          <Rate color="#FA8072" cost="550" speed="100" scale />
-          <Rate color="black" cost="1000" speed="200" />
+          {rates.map(item => <Rate key={item.id} color={item.color} cost={item.cost} speed={item.speed} />)}
         </div>
       </div>
     </>
