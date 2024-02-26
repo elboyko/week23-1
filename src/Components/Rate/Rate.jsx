@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "./Rate.module.css"
-import { useState } from "react"
+import cn from "classnames"
 
 function Rate(props) {
-   const { color, cost, speed } = props;
-   const [active, setActive] = useState(false);
-   function handleActiveCard() {
-      setActive(!active)
-   }
+   const { color, cost, speed, scale } = props;
+   const classes = cn(styles.card, {
+      [styles.scale]: scale
+   })
    return (
       <>
-         <div className={`${styles.card} ${active ? styles.scale : ""} `} onClick={handleActiveCard}>
+         <div className={classes}>
             <div className={styles.card_top} style={{ backgroundColor: color }}>
                <h2 className={styles.card_rate} >Безлимитный {cost}</h2>
                <div className={styles.card_box}>

@@ -2,8 +2,6 @@
    width: 250px;
    margin-right: 10px;
    border: 1px solid rgb(238, 245, 235);
-   transition: 0.7s;
-   order: 100;
 }
 
 .card_title {
@@ -47,6 +45,12 @@
    background-color: #D3D3D3;
 }
 
+
+
+.active {
+   transform: translateY(-50px);
+}
+
 .scale {
-   transform: scale(1.3);
+   transform: scaleY(1.3);
 }
